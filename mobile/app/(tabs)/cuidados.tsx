@@ -1,106 +1,84 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-import { Collapsible } from '@/components/ui/collapsible';
-import { ExternalLink } from '@/components/external-link';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { Collapsible } from '@/components/ui/collapsible';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
 
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: '#FF00', dark: '#FF0090' }}
       headerImage={
         <IconSymbol
           size={310}
           color="#808080"
+          
           name="chevron.left.forwardslash.chevron.right"
           style={styles.headerImage}
         />
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText
+        
+      
           type="title"
           style={{
             fontFamily: Fonts.rounded,
           }}>
-          Explore
+          Cuidados 
         </ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+      <ThemedText> Tatoos</ThemedText>
+      <Collapsible title="Mantenha sua tatoo limpa ">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
+         {' '}
+          <ThemedText type="defaultSemiBold">Deve manter a tatoo limpa lavando pelo menos 3 vezes ao dia 
+             nos 5 primeiros dias, com agua morna e sabão neutro</ThemedText>
         </ThemedText>
       </Collapsible>
-      <Collapsible title="Images">
+
+
+
+      <Collapsible title="Não tire as casquinhas ">
         <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
+        É normal que as novas tatoos descasquem, não as retire, sua pele esta cicatrizando, se tirar é possovel que a tinta saia junto e fique falhas{' '}
+          <ThemedText type="defaultSemiBold"></ThemedText> 
         </ThemedText>
-        <Image
-          source={require('@/assets/images/react-logo.png')}
-          style={{ width: 100, height: 100, alignSelf: 'center' }}
-        />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
       </Collapsible>
-      <Collapsible title="Light and dark mode components">
+
+
+
+      <ThemedText>Piersings</ThemedText>
+
+      <Collapsible title="Mantenha seu piercing limpo ">
         <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
+         duas vezes ao dia com soro fisiológico e sabonete neutro ou antibacteriano, lave sempre as mãos antes de tocar no local
+          <ThemedText type="defaultSemiBold"></ThemedText> 
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
       </Collapsible>
-      <Collapsible title="Animations">
+
+
+
+
+      <Collapsible title="o que não posso fazer? ">
         <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful{' '}
-          <ThemedText type="defaultSemiBold" style={{ fontFamily: Fonts.mono }}>
-            react-native-reanimated
-          </ThemedText>{' '}
-          library to create a waving hand animation.
+        Evite piscinas, mar, álcool, iodo e cosméticos, e tenha uma dieta equilibrada, rica em frutas e vegetais, evitando gorduras e ultraprocessado.
+         <ThemedText type="defaultSemiBold"></ThemedText> 
         </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
       </Collapsible>
+
+
+
     </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#808080',
+    color: '1C1C1C',
     bottom: -90,
     left: -35,
     position: 'absolute',
